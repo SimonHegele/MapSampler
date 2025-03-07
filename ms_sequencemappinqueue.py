@@ -11,7 +11,7 @@ class SequenceMappingQueue():
     them from the queue. The previous state of the queue is then restored by first loading
     the next query. If it does not correspond to the query, the state of the queue is
     already restored. If not, more mappings are loaded until we find one that does not
-    correspond to the query pair.
+    correspond to the query.
     """
 
     def get_query_id(cls, query):

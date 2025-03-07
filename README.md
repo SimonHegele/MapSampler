@@ -71,10 +71,10 @@ options:
 Input data:
 - Query:     58,219,222 Illumina read-pairs pooled from six organs (brain, heart, kidney, liver, lung and stomach) of the mouse
 - Reference: 7717 mouse chromosome 1 transcripts
-- 
+
 Output data:
 - 3,678,636 (~6,32%) of input Illumina read-pairs
-- 
+
 Time (using 8 threads):
 - real 7m24.496s
 - user 36m32.332s

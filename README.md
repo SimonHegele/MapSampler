@@ -71,8 +71,10 @@ options:
 Input data:
 - Query:     58,219,222 Illumina read-pairs pooled from six organs (brain, heart, kidney, liver, lung and stomach) of the mouse
 - Reference: 7717 mouse chromosome 1 transcripts
+- 
 Output data:
 - 3,678,636 (~6,32%) of input Illumina read-pairs
+- 
 Time (using 8 threads):
 - real 7m24.496s
 - user 36m32.332s
@@ -84,7 +86,7 @@ software benchmarks of transcriptome assembly tools.
 `python ms.py -m sr -ql illumina_1.fastq -qr illumina_2.fastq -t 8 chr1_transcripts.fasta`
 
 <p align="center">
-  <img src="ms_example.png" alt="Meine Bildunterschrift" width="300"/>
+  <img src="ms_example.png" alt="Meine Bildunterschrift" width="500"/>
   <br>
   <em>Transcript counts estimated with Kallisto (https://github.com/pachterlab/kallisto) before and after filtering. Counts for chromosome 1 transcripts remain largely unchanged, counts for non-chromosome 1 transcripts are greatly reduced</em>
 </p>

@@ -79,9 +79,7 @@ Time (using 8 threads):
 - real 7m24.496s
 - user 36m32.332s
 
-Filtering <br>
-of the mouse for reads mapping to one or more of   to build a small test data for small scale<br>
-software benchmarks of transcriptome assembly tools.
+(Creating of a small scale benchmark data set for the evaluation of transcriptome assembly tools.)
 
 `python ms.py -m sr -ql illumina_1.fastq -qr illumina_2.fastq -t 8 chr1_transcripts.fasta`
 

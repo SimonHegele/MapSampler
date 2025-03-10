@@ -6,7 +6,7 @@ Sampling of nucleotide sequences by mapping them to a reference
 
 ### Python
 
-**Version:**
+**Version:**<br>
 Python >= 3.10
 
 **Requirements**

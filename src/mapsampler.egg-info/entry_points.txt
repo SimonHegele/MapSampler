@@ -1,0 +1,2 @@
+[console_scripts]
+mapsampler = mapsampler.ms:main

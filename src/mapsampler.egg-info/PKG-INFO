@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: mapsampler
+Version: 0.1
+Summary: Mapping based nucleotide sequence filtering
+License: GPL3
+Requires-Python: >=3.10
+License-File: LICENSE.txt
+Requires-Dist: psutil

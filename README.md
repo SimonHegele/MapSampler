@@ -11,6 +11,7 @@ Sampling of nucleotide sequences by mapping them to a reference using Minimap2.
 git clone https://www.github.com/SimonHegele/MapSampler
 cd MapSampler
 conda create -n mapsampler -f environment.yml
+conda activate mapsampler
 pip install .
 ```
 

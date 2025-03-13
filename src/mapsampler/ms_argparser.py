@@ -5,7 +5,7 @@ from os         import mkdir, path
 
 class MSArgumentParser(ArgumentParser):
 
-    prog        =   "MapSampler"
+    prog        =   "mapsampler"
 
     description =   """
                     Sampling of nucleotide sequences by mapping to a reference 

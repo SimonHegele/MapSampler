@@ -19,7 +19,7 @@ pip install .
 
 ```
 mapsampler -h
-usage: MapSampler [-h] [-q QUERY] [-ql QUERY_LEFT] [-qr QUERY_RIGHT] [-tmp TEMPDIR] [-m MODE] [-a ANTI_FILTER] [-minq MINIMUM_QUALITY] [-maxq MAXIMUM_QUALITY] [-minl MINIMUM_LENGTH] [-maxl MAXIMUM_LENGTH]
+usage: mapsampler [-h] [-q QUERY] [-ql QUERY_LEFT] [-qr QUERY_RIGHT] [-tmp TEMPDIR] [-m MODE] [-a ANTI_FILTER] [-minq MINIMUM_QUALITY] [-maxq MAXIMUM_QUALITY] [-minl MINIMUM_LENGTH] [-maxl MAXIMUM_LENGTH]
                   [-minm MINIMUM_MATCHES] [-maxm MAXIMUM_MATCHES] [-t THREADS] [--loglevel {debug,info,warning,error,critical}]
                   reference
 

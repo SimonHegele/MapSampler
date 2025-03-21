@@ -84,7 +84,9 @@ def main():
         logging.info("Finalize")
         ms.merge_files()
 
-        logging.info("DONE")
+        logging.info("+++++++++++++++++++++++++++++++++++++++")
+        logging.info("Simon says: thanks for using mapsampler")
+        logging.info("+++++++++++++++++++++++++++++++++++++++")
 
 if __name__ == '__main__':
     main()

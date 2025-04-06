@@ -89,7 +89,7 @@ Time (using 8 threads):
 ## How it works
 
 1. **File splitting:**<br>
-   Splitting the query file(s) with Seqtk (one part per thread)
+   Splitting the query file(s) with Seqtk (one part per thread) and moving them to the temporary directory.
 2. **Index creation:**<br>
    Minimap2 indexing using the allowed number of threads.
 3. **Mapping:**<br>
@@ -101,8 +101,8 @@ Time (using 8 threads):
    If there is at least one mapping satisfying the specified requirements, the read is either accepted (default) or rejected (if --anti_filter is set).
    Accepted reads are written to separate files.
 5. **File merging:**<br>
-   The files with accepted sequences are merged into a dedicated files.
+   The files with accepted sequences are merged into a dedicate files.
 6. **Cleanup:**<br>
-   The temporary directory is removed even if the run fails.
+   The temporary directory is removed even if the run fails. (Exception: KeyboardInterrupt)
 
 The use of single-threaded Minimap2 brings the huge advantage, that the memory footprint of the filtering step is independent on the size of the query file(s) and the time required for the filtering also only scales linear with the size of the query file(s). This allows to efficiently process arbitrarily large query file(s). On the downside, in the mapping step each thread has to load the Minimap2 index separately. Depending on the size of the reference file the MapSampler should therefore only be used with a limited number of threads as it might fail otherwise.

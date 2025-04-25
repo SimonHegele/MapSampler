@@ -45,15 +45,6 @@ class Filter():
         
         return True
     
-    def get_full_path(self, file: str)->str:
-        """
-        Args:
-            file (str): name of a file in the tempdir
-
-        Returns:
-            str:        full path of the file
-        """
-    
     def filter_split(self, args):
         """
         Reads sequences and corresponding mappings in parallel,

@@ -22,44 +22,53 @@ class MSArgumentParser(ArgumentParser):
                           help="Reference FASTA/FASTQ"
                           )
         self.add_argument("-q", "--query",
+                          metavar="",
                           help="Query FASTA/FASTQ"
                           )
         self.add_argument("-ql", "--query_left",
+                          metavar="",
                           help="Left query FASTA/FASTQ for paired-end Illumina short reads"
                           )
         self.add_argument("-qr", "--query_right",
+                          metavar="",
                           help="Left query FASTA/FASTQ for paired-end Illumina short reads"
                           )
         
         # Output
         self.add_argument("-tmp", "--tempdir",
+                          metavar="",
                           help="Path to empty to non-existing temporary directory",
                           default=f"ms_tmp_{current_time}"
                           )
         
         # Mapping
         self.add_argument("-m", "--mode",
+                          metavar="",
                           help="Minimap2 mapping mode")
         
         # Filtering options
         self.add_argument("-a", "--anti_filter",
                           help="Anti filter: Select sequences without mappings meeting the criteria",
                           type=bool,
+                          metavar="",
                           default=False
                           )
         self.add_argument("-minq", "--minimum_quality",
                           help="Minimum alignment quality",
                           type=int,
+                          metavar="",
                           default=0
                           )
         self.add_argument("-maxq", "--maximum_quality",
                           help="Minimum alignment quality",
                           type=int,
+                          metavar="",
                           default=inf
                           )
         self.add_argument("-minl", "--minimum_length",
                           help="Minimum alignment length",
                           type=int,
+                          metavar="",
                           default=0
                           )
         self.add_argument("-maxl", "--maximum_length",
@@ -70,11 +79,13 @@ class MSArgumentParser(ArgumentParser):
         self.add_argument("-minm", "--minimum_matches",
                           help="Minimum alignment length",
                           type=int,
+                          metavar="",
                           default=0
                           )
         self.add_argument("-maxm", "--maximum_matches",
                           help="Minimum alignment length",
                           type=int,
+                          metavar="",
                           default=inf
                           )
         
@@ -82,11 +93,13 @@ class MSArgumentParser(ArgumentParser):
         self.add_argument("-t", "--threads",
                           default=2,
                           type=int,
+                          metavar="",
                           help="Number of threads CAUTION: Each thread loads the full reference!")
         self.add_argument("--loglevel",
                           type=str,
                           help="Choose loglevel. Mostly logs information about the progess",
                           default="info",
+                          metavar="",
                           choices=["debug","info","warning","error","critical"])
         
     def parse_args(self):

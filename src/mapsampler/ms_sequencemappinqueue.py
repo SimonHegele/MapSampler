@@ -64,3 +64,5 @@ class SequenceMappingQueue():
                 self.restore_state()
             except:
                 break
+            # https://www.youtube.com/watch?v=BKGZc1QZBxA
+            # (Don't use try except like this!)

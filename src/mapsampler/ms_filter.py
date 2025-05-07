@@ -73,8 +73,10 @@ class Filter():
         for query, query_mappings in SequenceMappingQueue(queries, mappings).queue():
             if any([(self.mapping_passes(qm) ^ self.args.anti_filter) for qm in query_mappings]):
                 filtered.append(query)
+                if len(filtered) > 50:
+                    self.file_service.write(out_file, filtered, mode="a")
+                    
         self.file_service.write(out_file, filtered, mode="a")
-
         logging.info("Thread {0:>3} done".format(thread))
 
     def get_files(self)->tuple[list,list]:

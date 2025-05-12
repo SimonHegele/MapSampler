@@ -4,6 +4,9 @@ Sampling of nucleotide sequences by mapping them to a reference using Minimap2.
 
 Especially well-suited for filtering arbitrarely large query files with smaller references.
 
+**Warning**
+Might not be safe for use within server networks
+
 ## Installation
 
 ```
@@ -106,3 +109,7 @@ Time (using 8 threads):
    The temporary directory is removed even if the run fails. (Exception: KeyboardInterrupt)
 
 The use of single-threaded Minimap2 brings the huge advantage, that the memory footprint of the filtering step is independent on the size of the query file(s) and the time required for the filtering also only scales linear with the size of the query file(s). This allows to efficiently process arbitrarily large query file(s). On the downside, in the mapping step each thread has to load the Minimap2 index separately. Depending on the size of the reference file the MapSampler should therefore only be used with a limited number of threads as it might fail otherwise.
+
+## Limitations / Issues
+
+A behaviour that I have not observed for local machines but for our server cluster is that the number of output sequences drops dramatically with increasing number of used processes.

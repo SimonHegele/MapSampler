@@ -4,8 +4,8 @@ Sampling of nucleotide sequences by mapping them to a reference using Minimap2.
 
 Especially well-suited for filtering arbitrarely large query files with smaller references.
 
-**Warning**
-Might not be safe for use within server networks
+**Warning:**<br>
+Might not be safe for use within server clusters
 
 ## Installation
 

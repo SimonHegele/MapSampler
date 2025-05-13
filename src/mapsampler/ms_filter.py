@@ -1,3 +1,12 @@
+"""
+Module Name:    ms_filesplitter.py
+Description:    provides class Filter()
+Author:         Simon Hegele
+Date:           2025-05-13
+Version:        1.0
+License:        GPL-3
+"""
+
 import logging
 
 from multiprocessing    import Manager, Pool

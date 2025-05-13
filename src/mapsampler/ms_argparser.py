@@ -1,3 +1,14 @@
+"""
+Module Name:    utrpy_argumentparser.py
+Description:    Provides class MSArgumentParser(ArgumentParser)
+                - Arguments for MapSampler added on initialization
+                - Extended parse_args() to check input
+Author:         Simon Hegele
+Date:           2025-04-01
+Version:        1.0
+License:        GPL-3
+"""
+
 from argparse   import ArgumentParser
 from datetime   import datetime
 from math       import inf
@@ -10,6 +21,8 @@ class MSArgumentParser(ArgumentParser):
     description =   """
                     Sampling of nucleotide sequences by mapping to a reference 
                     """
+
+    version     = "v1.0"
     
     def __init__(self) -> None:
 
@@ -101,6 +114,13 @@ class MSArgumentParser(ArgumentParser):
                           default="info",
                           metavar="",
                           choices=["debug","info","warning","error","critical"])
+        # Filtering options
+        self.add_argument("-v", "--version",
+                          help="print version",
+                          type=bool,
+                          metavar="",
+                          default=False
+                          )
         
     def parse_args(self):
         """
@@ -110,6 +130,10 @@ class MSArgumentParser(ArgumentParser):
         """
 
         args = super().parse_args()
+
+        if args.version:
+            print(self.version)
+            exit(0)
 
         # Input files
         if args.query and (args.query_left or args.query_right):

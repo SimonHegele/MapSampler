@@ -1,3 +1,13 @@
+"""
+Module Name:    ms_minimap2service.py
+Description:    Minimap2Service()
+                - Calls Minimap2 to map query sequences from split input files to reference in parallel with each instance running on a single thread
+Author:         Simon Hegele
+Date:           2025-05-13
+Version:        1.0
+License:        GPL-3
+"""
+
 from multiprocessing    import Pool
 from os                 import listdir, path
 from subprocess         import run

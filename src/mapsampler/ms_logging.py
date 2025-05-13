@@ -1,3 +1,12 @@
+"""
+Module Name:    ms_logging.py
+Description:    Provides method logging_setup
+Author:         Simon Hegele
+Date:           2025-05-13
+Version:        1.0
+License:        GPL-3
+"""
+
 import logging
 
 from sys import stdout

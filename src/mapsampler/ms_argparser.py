@@ -1,10 +1,10 @@
 """
-Module Name:    utrpy_argumentparser.py
+Module Name:    ms_argumentparser.py
 Description:    Provides class MSArgumentParser(ArgumentParser)
                 - Arguments for MapSampler added on initialization
                 - Extended parse_args() to check input
 Author:         Simon Hegele
-Date:           2025-04-01
+Date:           2025-05-13
 Version:        1.0
 License:        GPL-3
 """

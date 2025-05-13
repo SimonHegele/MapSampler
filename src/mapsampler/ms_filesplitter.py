@@ -1,3 +1,13 @@
+"""
+Module Name:    ms_filesplitter.py
+Description:    Provides class FileSplitter with static method file_split(args)
+                - Splitting query files using Seqtk
+Author:         Simon Hegele
+Date:           2025-05-13
+Version:        1.0
+License:        GPL-3
+"""
+
 from subprocess import run
 
 class FileSplitter():

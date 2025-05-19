@@ -1,6 +1,6 @@
 # MapSampler
 
-Sampling of nucleotide sequences by mapping them to a reference using Minimap2.
+Sampling of nucleotide sequences by mapping them to a reference using [Minimap2](https://github.com/lh3/minimap2).
 
 Especially well-suited for filtering arbitrarely large query files with smaller references.
 
@@ -84,7 +84,7 @@ Time (using 8 threads):
 <p align="center">
   <img src="ms_example.png" alt="Meine Bildunterschrift" width="500"/>
   <br>
-  <em>Transcript counts estimated with Kallisto (https://github.com/pachterlab/kallisto) before and after filtering. Counts for chromosome 1 transcripts remain largely unchanged, counts for non-chromosome 1 transcripts are greatly reduced</em>
+  <em>Transcript counts estimated with [Kallisto](https://github.com/pachterlab/kallisto) before and after filtering. Counts for chromosome 1 transcripts remain largely unchanged, counts for non-chromosome 1 transcripts are greatly reduced</em>
 </p>
 
 ## How it works

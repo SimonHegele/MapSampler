@@ -80,6 +80,7 @@ class MSArgumentParser(ArgumentParser):
                           )
         grp3.add_argument("-maxl", "--maximum_length",
                           help="Minimum alignment length",
+                          metavar="",
                           type=int,
                           default=inf
                           )

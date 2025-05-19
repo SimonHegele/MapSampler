@@ -20,10 +20,7 @@ pip install .
 ## Usage
 
 ```
-mapsampler -h
-usage: mapsampler [-h] [-q QUERY] [-ql QUERY_LEFT] [-qr QUERY_RIGHT] [-tmp TEMPDIR] [-m MODE] [-a ANTI_FILTER] [-minq MINIMUM_QUALITY] [-maxq MAXIMUM_QUALITY] [-minl MINIMUM_LENGTH] [-maxl MAXIMUM_LENGTH]
-                  [-minm MINIMUM_MATCHES] [-maxm MAXIMUM_MATCHES] [-t THREADS] [--loglevel {debug,info,warning,error,critical}]
-                  reference
+usage: mapsampler [-h] [-q ] [-ql ] [-qr ] [-m ] [-a ] [-minq ] [-maxq ] [-minl ] [-maxl MAXIMUM_LENGTH] [-minm ] [-maxm ] [-t ] [-tmp ] [--loglevel ] [-v ] reference
 
 Sampling of nucleotide sequences by mapping to a reference
 
@@ -32,33 +29,35 @@ positional arguments:
 
 options:
   -h, --help            show this help message and exit
-  -q QUERY, --query QUERY
-                        Query FASTA/FASTQ
-  -ql QUERY_LEFT, --query_left QUERY_LEFT
-                        Left query FASTA/FASTQ for paired-end Illumina short reads
-  -qr QUERY_RIGHT, --query_right QUERY_RIGHT
-                        Left query FASTA/FASTQ for paired-end Illumina short reads
-  -tmp TEMPDIR, --tempdir TEMPDIR
-                        Path to empty to non-existing temporary directory
-  -m MODE, --mode MODE  Minimap2 mapping mode
-  -a ANTI_FILTER, --anti_filter ANTI_FILTER
-                        Anti filter: Select sequences without mappings meeting the criteria
-  -minq MINIMUM_QUALITY, --minimum_quality MINIMUM_QUALITY
+
+Query-file(s):
+  -q, --query           Query FASTA/FASTQ
+  -ql, --query_left     Left query FASTA/FASTQ for paired-end Illumina short reads
+  -qr, --query_right    Left query FASTA/FASTQ for paired-end Illumina short reads
+
+Mapping:
+  -m, --mode            Minimap2 mapping mode
+
+Filtering:
+  -a, --anti_filter     Anti filter: Select sequences without mappings meeting the criteria
+  -minq, --minimum_quality
                         Minimum alignment quality
-  -maxq MAXIMUM_QUALITY, --maximum_quality MAXIMUM_QUALITY
+  -maxq, --maximum_quality
                         Minimum alignment quality
-  -minl MINIMUM_LENGTH, --minimum_length MINIMUM_LENGTH
+  -minl, --minimum_length
                         Minimum alignment length
-  -maxl MAXIMUM_LENGTH, --maximum_length MAXIMUM_LENGTH
+  -maxl, --maximum_length MAXIMUM_LENGTH
                         Minimum alignment length
-  -minm MINIMUM_MATCHES, --minimum_matches MINIMUM_MATCHES
+  -minm, --minimum_matches
                         Minimum alignment length
-  -maxm MAXIMUM_MATCHES, --maximum_matches MAXIMUM_MATCHES
+  -maxm, --maximum_matches
                         Minimum alignment length
-  -t THREADS, --threads THREADS
-                        Number of threads CAUTION: Each thread loads the full reference!
-  --loglevel {debug,info,warning,error,critical}
-                        Choose loglevel. Mostly logs information about the progess
+
+Others:
+  -t, --threads         Number of threads CAUTION: Each thread loads the full reference!
+  -tmp, --tempdir       Path to empty to non-existing temporary directory
+  --loglevel            Choose loglevel. Mostly logs information about the progess
+  -v, --version         print version
 ```
 
 ### Output

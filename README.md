@@ -83,9 +83,8 @@ Time (using 8 threads):
 
 <p align="center">
   <img src="ms_example.png" alt="Meine Bildunterschrift" width="500"/>
-  <br>
-  <em>Transcript counts estimated with [Kallisto](https://github.com/pachterlab/kallisto) before and after filtering. Counts for chromosome 1 transcripts remain largely unchanged, counts for non-chromosome 1 transcripts are greatly reduced</em>
 </p>
+Transcript counts estimated with [Kallisto](https://github.com/pachterlab/kallisto) before and after filtering. Counts for chromosome 1 transcripts remain largely unchanged, counts for non-chromosome 1 transcripts are greatly reduced
 
 ## How it works
 

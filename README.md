@@ -46,7 +46,7 @@ Filtering:
                         Minimum alignment quality
   -minl, --minimum_length
                         Minimum alignment length
-  -maxl, --maximum_length MAXIMUM_LENGTH
+  -maxl, --maximum_length
                         Minimum alignment length
   -minm, --minimum_matches
                         Minimum alignment length

@@ -45,7 +45,7 @@ class MSArgumentParser(ArgumentParser):
                           )
         grp1.add_argument("-qr", "--query_right",
                           metavar="",
-                          help="Left query FASTA/FASTQ for paired-end Illumina short reads"
+                          help="Right query FASTA/FASTQ for paired-end Illumina short reads"
                           )
         
         grp2 = self.add_argument_group("Mapping")

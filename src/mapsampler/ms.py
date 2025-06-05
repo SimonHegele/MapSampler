@@ -1,13 +1,3 @@
-"""
-Module Name:    ms.py
-Description:    Main-file of the MapSampler,
-                Controls the workflow 
-Author:         Simon Hegele
-Date:           2025-05-13
-Version:        1.0
-License:        GPL-3
-"""
-
 import logging
 
 from os                     import listdir, path
@@ -42,6 +32,7 @@ class MS():
         """
         
         rmtree(self.args.tempdir, ignore_errors=True)
+        pass
     
     def ram_check(self):
         
@@ -89,7 +80,7 @@ def main():
         ms.mm2_service.map()
         
         logging.info("Start filtering ... ")
-        ms.filter.filter()
+        ms.filter.process_all()
 
         logging.info("Finalize")
         ms.merge_files()

@@ -1,12 +1,4 @@
-"""
-Module Name:    ms_sequencemappinqueue.py
-Description:    provides class SequenceMappingQueue() 
-                - Calls Minimap2 to map query sequences from split input files to reference in parallel with each instance running on a single thread
-Author:         Simon Hegele
-Date:           2025-05-13
-Version:        1.0
-License:        GPL-3
-"""
+from typing import Generator
 
 class SequenceMappingQueue():
     """
@@ -28,12 +20,7 @@ class SequenceMappingQueue():
 
         return query["header"][1:].split(" ")[0]
 
-    def __init__(self, queries: list[dict], mappings: list[dict]):
-        """
-        Args:
-            queries (list[dict]):   List of FASTA/FASTQ nucleotide sequences 
-            mappings (list[dict]):  List of PAF         mapping
-        """
+    def __init__(self, queries: Generator, mappings: Generator):
 
         self.queries  = queries 
         self.mappings = mappings

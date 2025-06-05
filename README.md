@@ -20,7 +20,7 @@ pip install .
 ## Usage
 
 ```
-usage: mapsampler [-h] [-q ] [-ql ] [-qr ] [-m ] [-a ] [-minq ] [-maxq ] [-minl ] [-maxl MAXIMUM_LENGTH] [-minm ] [-maxm ] [-t ] [-tmp ] [--loglevel ] [-v ] reference
+usage: mapsampler [-h] [-q] [-ql] [-qr] [-m] [-a] [-minq] [-maxq] [-minl] [-maxl] [-minm] [-maxm] [-t] [-tmp] [-l] [-v] reference
 
 Sampling of nucleotide sequences by mapping to a reference
 
@@ -31,33 +31,33 @@ options:
   -h, --help            show this help message and exit
 
 Query-file(s):
-  -q, --query           Query FASTA/FASTQ
-  -ql, --query_left     Left query FASTA/FASTQ for paired-end Illumina short reads
-  -qr, --query_right    Left query FASTA/FASTQ for paired-end Illumina short reads
+  -q , --query          Query FASTA/FASTQ
+  -ql , --query_left    Left query FASTA/FASTQ for paired-end Illumina short reads
+  -qr , --query_right   Left query FASTA/FASTQ for paired-end Illumina short reads
 
 Mapping:
-  -m, --mode            Minimap2 mapping mode
+  -m , --mode           Minimap2 mapping mode
 
 Filtering:
-  -a, --anti_filter     Anti filter: Select sequences without mappings meeting the criteria
-  -minq, --minimum_quality
-                        Minimum alignment quality
-  -maxq, --maximum_quality
-                        Minimum alignment quality
-  -minl, --minimum_length
-                        Minimum alignment length
-  -maxl, --maximum_length
-                        Minimum alignment length
-  -minm, --minimum_matches
-                        Minimum alignment length
-  -maxm, --maximum_matches
-                        Minimum alignment length
+  -a , --anti_filter    Anti filter: Select sequences without mappings meeting the criteria
+  -minq , --minimum_quality
+                        Minimum alignment quality [default: 0]
+  -maxq , --maximum_quality
+                        Maximum alignment quality [default: inf]
+  -minl , --minimum_length
+                        Minimum alignment length [default: 0]
+  -maxl , --maximum_length
+                        Maximum alignment length [default: inf]
+  -minm , --minimum_matches
+                        Minimum alignment length [default: 0]
+  -maxm , --maximum_matches
+                        Maximum alignment matchs [default: inf]
 
 Others:
-  -t, --threads         Number of threads CAUTION: Each thread loads the full reference!
-  -tmp, --tempdir       Path to empty to non-existing temporary directory
-  --loglevel            Choose loglevel. Mostly logs information about the progess
-  -v, --version         print version
+  -t , --threads        Number of threads CAUTION: Each thread loads the full reference!
+  -tmp , --tempdir      Path to empty to non-existing temporary directory
+  -l , --loglevel       Choose loglevel. Mostly logs information about the progess
+  -v , --version        print version
 ```
 
 ### Output

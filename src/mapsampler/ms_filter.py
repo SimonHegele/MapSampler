@@ -62,8 +62,8 @@ class Filter():
 
         Args:
             args (tuple):   queries (str), mappings (str), thread (int)
-                            queries:   A path to a file with nucleotide sequences
-                            mappings:  A path to a file with corresponding sequences
+                            queries:   A path to a file with nucleotide sequences (FASTA/FASTQ)
+                            mappings:  A path to a file with corresponding mappings (PAF)
                             thread:    Index of the thread calling this function
 
         Returns:

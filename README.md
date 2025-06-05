@@ -33,7 +33,7 @@ options:
 Query-file(s):
   -q , --query          Query FASTA/FASTQ
   -ql , --query_left    Left query FASTA/FASTQ for paired-end Illumina short reads
-  -qr , --query_right   Left query FASTA/FASTQ for paired-end Illumina short reads
+  -qr , --query_right   Right query FASTA/FASTQ for paired-end Illumina short reads
 
 Mapping:
   -m , --mode           Minimap2 mapping mode

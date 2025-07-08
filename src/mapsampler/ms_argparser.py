@@ -100,7 +100,7 @@ class MSArgumentParser(ArgumentParser):
         # Others
         grp4 = self.add_argument_group("Others")
         grp4.add_argument("-t", "--threads",
-                          default=2,
+                          default=8,
                           type=int,
                           metavar="",
                           help="Number of threads CAUTION: Each thread loads the full reference!")

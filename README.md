@@ -84,6 +84,7 @@ Time (using 8 threads):
 <p align="center">
   <img src="ms_example.png" alt="Meine Bildunterschrift" width="500"/>
 </p>
+
 Transcript counts estimated with [Kallisto](https://github.com/pachterlab/kallisto) before and after filtering. Counts for chromosome 1 transcripts remain largely unchanged, counts for non-chromosome 1 transcripts are greatly reduced
 
 ## How it works
@@ -108,8 +109,9 @@ Transcript counts estimated with [Kallisto](https://github.com/pachterlab/kallis
 
 The use of single-threaded Minimap2 brings the huge advantage, that the memory footprint of the filtering step is independent on the size of the query file(s) and the time required for the filtering also only scales linear with the size of the query file(s). This allows to efficiently process arbitrarily large query file(s). On the downside, in the mapping step each thread has to load the Minimap2 index separately. Depending on the size of the reference file the MapSampler should therefore only be used with a limited number of threads as it might fail otherwise.
 
-Because of the splitting of the splitting query file(s) with Seqtk, MapSampler parallelizes reading from and writing to intermidiate files, making it faster for large queries than using the typical approach using samtools. 
+By splitting the query file(s) with Seqtk, MapSampler parallelizes reading from and writing to intermidiate files, which makes it especially efficient for larger queries.
 
 ## Limitations / Issues
 
 A behaviour that I have not observed for local machines but for our server cluster is that the number of output sequences drops dramatically with increasing number of used processes.
+

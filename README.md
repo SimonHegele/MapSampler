@@ -107,11 +107,17 @@ Transcript counts estimated with [Kallisto](https://github.com/pachterlab/kallis
 6. **Cleanup:**<br>
    The temporary directory is removed even if the run fails. (Exception: KeyboardInterrupt)
 
-The use of single-threaded Minimap2 brings the huge advantage, that the memory footprint of the filtering step is independent on the size of the query file(s) and the time required for the filtering also only scales linear with the size of the query file(s). This allows to efficiently process arbitrarily large query file(s). On the downside, in the mapping step each thread has to load the Minimap2 index separately. Depending on the size of the reference file the MapSampler should therefore only be used with a limited number of threads as it might fail otherwise.
+Advantages and disadvantages of MapSampler arise from the splitting of query files and the use of multiple single-threaded Minimap2 instances.
 
-By splitting the query file(s) with Seqtk, MapSampler parallelizes reading from and writing to intermidiate files, which makes it especially efficient for larger queries.
++ Filtering step: almost invisible memory footprint
++ Filtering step: time scales linear with number of input sequences
+
+- Mapping step: Each parallel Minimap2 instance has to load the reference used during the filtering step.
+
+MapSampler is well suited for filtering arbitrarily large query read file(s) using references of limited size.
 
 ## Limitations / Issues
 
 A behaviour that I have not observed for local machines but for our server cluster is that the number of output sequences drops dramatically with increasing number of used processes.
+
 

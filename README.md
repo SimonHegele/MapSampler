@@ -109,17 +109,18 @@ Transcript counts estimated with [Kallisto](https://github.com/pachterlab/kallis
 
 Advantages and disadvantages of MapSampler arise from the splitting of query files and the use of multiple single-threaded Minimap2 instances.
 
-+ Filtering step: almost invisible memory footprint
-+ Filtering step: time scales linear with number of input sequences
-+ File reading:   Splitting the query into multiple paths allows parallel reading and writing of files during intermediate steps
++ (+) Filtering step: almost invisible memory footprint
++ (+) Filtering step: time scales linear with number of input sequences
++ (+) File reading:   Splitting the query into multiple paths allows parallel reading and writing of files during intermediate steps
 
-- Mapping step: Each parallel Minimap2 instance has to load the reference used during the filtering step.
+- (-) Mapping step: Each parallel Minimap2 instance has to load the reference used during the filtering step.
 
 MapSampler is well-suited for filtering arbitrarily large query read file(s) using references of limited size.
 
 ## Limitations / Issues
 
 A behaviour that I have not observed for local machines but for our server cluster is that the number of output sequences drops dramatically with increasing number of used processes.
+
 
 
 

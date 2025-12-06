@@ -117,10 +117,10 @@ Advantages and disadvantages of MapSampler arise from the splitting of query fil
 
 MapSampler is well-suited for filtering arbitrarily large query read file(s) using references of limited size.
 
-## Limitations / Issues
+## The obvious question: Why?
 
-A behaviour that I have not observed for local machines but for our server cluster is that the number of output sequences drops dramatically with increasing number of used processes.
-
+Why would anyone bother to write a complete tool like this when you could also pipe your alignment tools output to samtools view?
+I definitely wouldn't! MapSampler is repurposed code from a different project I put on pause :D
 
 
 
